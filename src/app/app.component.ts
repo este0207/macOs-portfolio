@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AppBarComponent } from './app-bar/app-bar.component';
@@ -16,11 +16,13 @@ import { FenetrePhotoComponent } from "./fenetre-photo/fenetre-photo.component";
 })
 export class AppComponent {
   title = 'macOs-portfolio';
-  // isVisible = true;
+
   isMailVisible = false;
   isNoteVisible = false;
   isSafariVisible = false;
   isPhotoVisible = false;
+
+  // settingService = inject();
 
   
   onShowWindows(event: string) {
