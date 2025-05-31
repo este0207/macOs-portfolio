@@ -10,7 +10,7 @@ import { AppIconsComponent } from "../app-icons/app-icons.component";
 })
 export class AppBarComponent {
 
-  exec = output<"mail"|"note"|"safari"|"photo">();
+  exec = output<"mail"|"note"|"safari"|"photo"|"setting">();
   ShowMail() {
     this.exec.emit("mail");
   }
@@ -25,6 +25,10 @@ export class AppBarComponent {
 
   ShowPhoto() {
     this.exec.emit("photo");
+  }
+
+  ShowSetting() {
+    this.exec.emit("setting");
   }
 
  

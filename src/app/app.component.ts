@@ -7,10 +7,11 @@ import { FenetreNoteComponent } from "./fenetre-note/fenetre-note.component";
 import { FenetreMailComponent } from './fenetre-mail/fenetre-mail.component';
 import { FenetreSafariComponent } from "./fenetre-safari/fenetre-safari.component";
 import { FenetrePhotoComponent } from "./fenetre-photo/fenetre-photo.component";
+import { FenetreSettingComponent } from "./fenetre-setting/fenetre-setting.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,NavBarComponent, AppBarComponent, FoldersComponent, FenetreNoteComponent, FenetreMailComponent, FenetreSafariComponent, FenetrePhotoComponent],
+  imports: [RouterOutlet, NavBarComponent, AppBarComponent, FoldersComponent, FenetreNoteComponent, FenetreMailComponent, FenetreSafariComponent, FenetrePhotoComponent, FenetreSettingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -21,6 +22,7 @@ export class AppComponent {
   isNoteVisible = false;
   isSafariVisible = false;
   isPhotoVisible = false;
+  isSettingVisible = false;
 
   // settingService = inject();
 
@@ -34,6 +36,8 @@ export class AppComponent {
       this.isSafariVisible = true;
     } if (event == "photo") {
       this.isPhotoVisible = true;
+    } if (event == "setting") {
+      this.isSettingVisible = true;
     }
     console.log(event);
     
@@ -51,5 +55,8 @@ export class AppComponent {
 
   onQuitPhoto(event:any) {
     this.isPhotoVisible = false;
+  }
+  onQuitSetting(event:any) {
+    this.isSettingVisible = false;
   }
 }

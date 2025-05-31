@@ -12,6 +12,9 @@
  @if (isSafariVisible==true) {
      <app-fenetre-safari (remove)="onQuitSafari($event)"></app-fenetre-safari>
  }
+@if (isSettingVisible==true) {
+<app-fenetre-setting (remove)="onQuitSetting($event)"></app-fenetre-setting>
+}
 <app-folders></app-folders>
 <app-folders text="Comming Soon..." stylefolder="two"></app-folders>
 <app-app-bar (exec)="onShowWindows($event)"></app-app-bar>

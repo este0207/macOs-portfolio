@@ -13,3 +13,11 @@
     backdrop-filter: blur(3px);
     gap: 10px;
 }
+
+@media (max-width:679px){
+    .bar{
+        right: 40px;
+        bottom: 30px;
+        width: 80%;
+    }
+}

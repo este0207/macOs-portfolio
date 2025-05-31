@@ -1,0 +1,36 @@
+*{
+    color: white;
+}
+
+
+.fenetre {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+.contente {
+    display: flex;
+    /* padding: 10px; */
+    /* background-color: rgb(128, 128, 128); */
+}
+
+.setting-name{
+    display: flex;
+    width: 40%;
+    background-color: rgba(128, 128, 128, 0.752);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+}
+
+.setting-name *{
+    padding-left: 5%;
+}
+
+.setting-view{
+    display: flex;
+    width: 100%;
+    background-color: gray;
+
+}

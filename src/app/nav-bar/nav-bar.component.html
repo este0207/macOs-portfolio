@@ -1,5 +1,9 @@
 <div class="navbar">
-    <div class="first">
+    <div class="burger-menu" (click)="toggleMenu()" [class.hidden]="isMenuOpen">
+        <!-- <i class="fas fa-bars"></i> -->
+         <p>test</p>
+    </div>
+    <div class="first" [class.active]="isMenuOpen">
         <a href=""><i class="fa-brands fa-apple"></i></a>
         <ul>
             <strong><app-links text="Finder"></app-links></strong>
